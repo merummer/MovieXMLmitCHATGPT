@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieXMLmitCHATGPT", "MovieXMLmitCHATGPT\MovieXMLmitCHATGPT.csproj", "{6ED35F00-74F9-427A-AE72-FF8BCABEAF21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ED35F00-74F9-427A-AE72-FF8BCABEAF21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED35F00-74F9-427A-AE72-FF8BCABEAF21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED35F00-74F9-427A-AE72-FF8BCABEAF21}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6ED35F00-74F9-427A-AE72-FF8BCABEAF21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED35F00-74F9-427A-AE72-FF8BCABEAF21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED35F00-74F9-427A-AE72-FF8BCABEAF21}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F32CE04B-CD44-48EF-B88E-D3856F5F7192}
+	EndGlobalSection
+EndGlobal

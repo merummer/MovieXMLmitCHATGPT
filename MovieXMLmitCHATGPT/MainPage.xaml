@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MovieXMLmitCHATGPT.Models"
+             xmlns:viewModels="clr-namespace:MovieXMLmitCHATGPT.ViewModels"
+             x:Class="MovieXMLmitCHATGPT.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout Padding="20">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*" RowSpacing="20" ColumnDefinitions="*,*">
+        <Label Text="Movies und XML-CRUD mit Chat GPT" TextColor="PeachPuff" FontSize="20" HorizontalTextAlignment="Center" Grid.ColumnSpan="2"/>
+            <Entry x:Name="id" Placeholder="Id" Keyboard="Numeric" Text="{Binding Id}" Grid.Row="1" Grid.ColumnSpan="2"/>
+            <Entry x:Name="title" Placeholder="Title" Text="{Binding Title}" Grid.Row="2" Grid.ColumnSpan="2"/>
+            <Entry x:Name="director" Placeholder="Director" Text="{Binding Director}" Grid.Row="3" Grid.ColumnSpan="2"/>
+            <Entry x:Name="year" Placeholder="Year" Keyboard="Numeric" Text="{Binding Year}" Grid.Row="4" Grid.ColumnSpan="2"/>
+            <Button Text="Add Movie" Command="{Binding ExecuteAddMovieCommand}" Grid.Row="5" Grid.Column="0"/>
+            <Button Text="Update Movie" Command="{Binding ExecuteUpdateMovieCommand}" Grid.Row="5" Grid.Column="1"/>
+            <Button Text="Delete Movie" Command="{Binding ExecuteDeleteMovieCommand}" CommandParameter="{Binding Id}" Grid.Row="6" Grid.Column="0"/>
+            <Button Text="Load Movies" Command="{Binding ExecuteLoadMoviesCommand}" Grid.Row="6" Grid.Column="1"/>
+            <CollectionView x:Name="MoviesListView" ItemsSource="{Binding Movies}" Grid.Row="7">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Movie">
+                    <Grid ColumnDefinitions="*,*">
+                    <Label Text="{Binding Title}"/>
+                    <Label Text="{Binding Director}" Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
